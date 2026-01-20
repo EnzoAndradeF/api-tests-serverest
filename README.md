@@ -1,8 +1,11 @@
 # **Teste de API REST e Documentação**
 
 ##  Visão Geral
-
 Este repositório contém um projeto de testes de API REST utilizando a ServeRest como sistema em teste. O objetivo é demonstrar conhecimentos em estratégia, execução e documentação de testes de API.
+
+## Mindmap do planejamento
+![alt text](img/Mindmap.png)
+![alt text](img/mapamental.png)
 
 ##  API Testada
 
