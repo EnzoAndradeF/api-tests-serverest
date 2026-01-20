@@ -26,6 +26,22 @@ Para que ele fique disponível para consulta e venda**
 
 
 ## Casos de teste
+|**ID**|**Descrição**|**Pré-condições**|
+|:-----|:------------|:------------|
+| | | |
 
+
+**Dados da requisição:**
+
+| Campo | Descrição |
+|------|----------|
+| **Objetivo** | Validar o cadastro de um pet com dados válidos |
+| **Pré-condições** | API Petstore disponível |
+| **Método HTTP** | POST |
+| **Endpoint** | /pet |
+| **Headers** | Content-Type: application/json |
+| **Massa de Dados** | `{ "id": 123, "name": "Rex", "status": "available" }` |
+| **Ação** | Enviar requisição POST com payload válido |
+| **Resultado Esperado** | Status 200 e retorno dos dados do pet cadastrado |
 
 
