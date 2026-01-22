@@ -21,71 +21,94 @@ Para acessar funcionalidades restritas**
    - Campos vazios
 
 ## Casos de teste
+### Caso de teste 01: 
+---
+| ID       | Descrição |
+| :------- | :---------|
+| CT02-CT01 | Realizar o login com credenciais válidas. |
 
-| ID | CT02.01 |
-|------|----------|
-| **Objetivo** | Login com credenciais válidas |
-| **Pré-condições** |  Usuário cadastrado |
+| Campo       | Detalhe |
+| :------- | :---------|
+| **Pré-condições** | API Serverest disponível / Usuário cadastrado |
 | **Método HTTP** | POST |
 | **Endpoint** | /login |
 | **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
-  "email": "fulano@qa.com",
-  "password": "teste" |
+
+| Massa de dados |
+|:---------------|
+|"nome": "enzo comum",
+  "email": "enzocomum@qa.com.br",
+ "password": "teste",
+  "administrador": "false" |
+
 | **Ação** |
+|:-------|
  Definir o método HTTP POST
- Definir o endpoint login
- Preencher a propriedade “nome”
+ Definir o endpoint
+ Preencher a propriedade “email”
  Preencher a propriedade “password” |
-| **Resultado Esperado** |O sistema deve retornar o status code 201, mensagem de sucesso e token de autorização|
 
-## Casos de teste
+| **Resultado Esperado** |
+|:-------|
+|O sistema deve retornar o status code 200, mensagem de sucesso e token de autorização|
 
-| ID | CT02.02 |
-|------|----------|
-| **Objetivo** | Login com email inexistente |
+### Caso de teste 02: 
+---
+| ID       | Descrição |
+| :------- | :---------|
+| CT02-CT02 | Realizar o login com email inexistente. |
+
+| Campo       | Detalhe |
+| :------- | :---------|
 | **Pré-condições** | API Serverest disponível |
 | **Método HTTP** | POST |
 | **Endpoint** | /login |
 | **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
-  "email": "inexistente@email.com",
-  "password": "teste" |
-| **Ação** |
- Definir o método HTTP POST
- Definir o endpoint login
- Preencher a propriedade “nome”
- Preencher a propriedade “password” |
-| **Resultado Esperado** |O sistema deve retornar o status code 401, mensagem de erro|
 
-| ID | CT02.02 |
-|------|----------|
-| **Objetivo** | Login com senha incorreta |
-| **Pré-condições** | Usuário cadastrado |
-| **Método HTTP** | POST |
-| **Endpoint** | /login |
-| **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
-  "email": "teste",
-  "password": "teste" |
-| **Ação** |
- Definir o método HTTP POST
- Definir o endpoint login
- Preencher a propriedade “nome”
- Preencher a propriedade “password” |
-| **Resultado Esperado** |O sistema deve retornar o status code 401, mensagem de erro|
+| Massa de dados |
+|:---------------|
+|"nome": "teste",
+  "email": "emailinexistente@qa.com.br",
+ "password": "teste",
+  "administrador": "false" |
 
-| ID | CT02.03 |
-|------|----------|
-| **Objetivo** | Login com campos vazios |
+| **Ação** |
+|:-------|
+ Definir o método HTTP POST
+ Definir o endpoint
+ Preencher a propriedade “email”
+ Preencher a propriedade “password” |
+
+| **Resultado Esperado** |
+|:-------|
+|O sistema deve retornar o status code 401 e mensagem de erro|
+
+### Caso de teste 03: 
+---
+| ID       | Descrição |
+| :------- | :---------|
+| CT02-CT03 | Realizar o login com campos vazios. |
+
+| Campo       | Detalhe |
+| :------- | :---------|
 | **Pré-condições** | API Serverest disponível |
 | **Método HTTP** | POST |
 | **Endpoint** | /login |
 | **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
+
+| Massa de dados |
+|:---------------|
+|"nome": "",
   "email": "",
-  "password": "" |
+ "password": "",
+  "administrador": "" |
+
 | **Ação** |
+|:-------|
  Definir o método HTTP POST
- Definir o endpoint login |
-| **Resultado Esperado** |O sistema deve retornar o status code 401, mensagem de erro|
+ Definir o endpoint login
+ |
+
+| **Resultado Esperado** |
+|:-------|
+|O sistema deve retornar o status code 401 e mensagem de erro|

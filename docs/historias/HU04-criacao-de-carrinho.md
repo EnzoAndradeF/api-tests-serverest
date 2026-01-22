@@ -21,97 +21,119 @@ Para realizar uma compra de produtos**
    - Produto inexistente
    - Quantidade maior que o estoque
 
-| ID | CT04.01 |
-|------|----------|
-| **Objetivo** | Criação de carrinho com sucesso |
-| **Pré-condições** | Usuário autenticado / produto cadastrado |
-| **Método HTTP** | POST |
-| **Endpoint** | /carrinhos |
-| **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
-"idProduto": "BeeJh5lz3k6kSIzA",
-"quantidade": 1
-"idProduto": "YaeJ455lz3k6kSIzA",
-"quantidade": 381 |
-| **Ação** |
- Definir o método HTTP POST
- Definir o endpoint carrinhos
- Preencher a propriedade “idProduto”
- Preencher a propriedade “quantidade”|
-| **Resultado Esperado** |O sistema deve retornar o status code 201, mensagem de sucesso|
+## Casos de teste
+### Caso de teste 01: 
+---
+| ID       | Descrição |
+| :------- | :---------|
+| CT04-CT01 | Realizar o criação de carrinho de compras. |
 
-| ID | CT04.02 |
-|------|----------|
-| **Objetivo** | Criação de carrinho com token expirado |
-| **Pré-condições** | Usuário com token expirado / produto cadastrado |
+| Campo       | Detalhe |
+| :------- | :---------|
+| **Pré-condições** | API Serverest disponível / usuário autenticado |
 | **Método HTTP** | POST |
 | **Endpoint** | /carrinhos |
 | **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
-"idProduto": "BeeJh5lz3k6kSIzA",
-"quantidade": 1
-"idProduto": "YaeJ455lz3k6kSIzA",
-"quantidade": 381 |
-| **Ação** |
- Definir o método HTTP POST
- Definir o endpoint carrinhos
- Preencher a propriedade “idProduto”
- Preencher a propriedade “quantidade”| |
-| **Resultado Esperado** |O sistema deve retornar o status code 201, mensagem de sucesso|
 
-| ID | CT04.03 |
-|------|----------|
-| **Objetivo** | Criação de carrinho com produto inexistente |
-| **Pré-condições** | Usuário com token expirado |
-| **Método HTTP** | POST |
-| **Endpoint** | /carrinhos |
-| **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
-"idProduto": "BeeJh5lz3k6kSIzA",
-"quantidade": 1
-"idProduto": "YaeJ455lz3k6kSIzA",
-"quantidade": 381 |
-| **Ação** |
- Definir o método HTTP POST
- Definir o endpoint carrinhos
- Preencher a propriedade “idProduto”
- Preencher a propriedade “quantidade”| |
-| **Resultado Esperado** |O sistema deve retornar o status code 400, mensagem de erro|
+| Massa de dados |
+|:---------------|  
+|"iProduto":""
+"quantidade":|
 
-| ID | CT04.04 |
-|------|----------|
-| **Objetivo** | Criação de carrinho com quantidade de produto maior que o estoque |
-| **Pré-condições** | Usuário autenticado / produto cadastrado |
-| **Método HTTP** | POST |
-| **Endpoint** | /carrinhos |
-| **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
-"idProduto": "BeeJh5lz3k6kSIzA",
-"quantidade": 1
-"idProduto": "YaeJ455lz3k6kSIzA",
-"quantidade": 381 |
 | **Ação** |
+|:-------|
  Definir o método HTTP POST
  Definir o endpoint carrinhos
  Preencher a propriedade “idProduto”
- Preencher a propriedade “quantidade”| |
-| **Resultado Esperado** |O sistema deve retornar o status code 400, mensagem de erro|
+ Preencher a propriedade “quantidade” |
 
-| ID | CT04.04 |
-|------|----------|
-| **Objetivo** | Criação de carrinho com campos vazios |
-| **Pré-condições** | Usuário autenticado |
+| **Resultado Esperado** |
+|:-------|
+|O sistema deve retornar o status code 201, mensagem de sucesso e Id do carrinho|
+
+### Caso de teste 02: 
+---
+| ID       | Descrição |
+| :------- | :---------|
+| CT04-CT02 | Adicionar quantidade de produto maior que estoque no carrinho. |
+
+| Campo       | Detalhe |
+| :------- | :---------|
+| **Pré-condições** | API Serverest disponível / usuário autenticado |
 | **Método HTTP** | POST |
 | **Endpoint** | /carrinhos |
 | **Headers** | Content-Type: application/json |
-| **Massa de Dados:** |
-"idProduto": "",
-"quantidade": 
-"idProduto": "",
-"quantidade":  |
+
+| Massa de dados |
+|:---------------|  
+|"iProduto":""
+"quantidade":|
+
 | **Ação** |
+|:-------|
  Definir o método HTTP POST
  Definir o endpoint carrinhos
  Preencher a propriedade “idProduto”
- Preencher a propriedade “quantidade”| |
-| **Resultado Esperado** |O sistema deve retornar o status code 400, mensagem de erro|
+ Preencher a propriedade “quantidade” |
+
+| **Resultado Esperado** |
+|:-------|
+|O sistema deve retornar o status code 400, mensagem de erro|
+
+### Caso de teste 03: 
+---
+| ID       | Descrição |
+| :------- | :---------|
+| CT04-CT03 | Adicionar produto inexistente no carrinho. |
+
+| Campo       | Detalhe |
+| :------- | :---------|
+| **Pré-condições** | API Serverest disponível / usuário autenticado |
+| **Método HTTP** | POST |
+| **Endpoint** | /carrinhos |
+| **Headers** | Content-Type: application/json |
+
+| Massa de dados |
+|:---------------|  
+|"iProduto": "abcdef",
+"quantidade": 10|
+
+| **Ação** |
+|:-------|
+ Definir o método HTTP POST
+ Definir o endpoint carrinhos
+ Preencher a propriedade “idProduto”
+ Preencher a propriedade “quantidade” |
+
+| **Resultado Esperado** |
+|:-------|
+|O sistema deve retornar o status code 400, mensagem de erro|
+
+### Caso de teste 04: 
+---
+| ID       | Descrição |
+| :------- | :---------|
+| CT04-CT04 | Criar carrinho de compras com campos vazios. |
+
+| Campo       | Detalhe |
+| :------- | :---------|
+| **Pré-condições** | API Serverest disponível / usuário autenticado |
+| **Método HTTP** | POST |
+| **Endpoint** | /carrinhos |
+| **Headers** | Content-Type: application/json |
+
+| Massa de dados |
+|:---------------|  
+|"iProduto": "",
+"quantidade": |
+
+| **Ação** |
+|:-------|
+ Definir o método HTTP POST
+ Definir o endpoint carrinhos
+ Preencher a propriedade “idProduto”
+ Preencher a propriedade “quantidade” |
+
+| **Resultado Esperado** |
+|:-------|
+|O sistema deve retornar o status code 400, mensagem de erro|

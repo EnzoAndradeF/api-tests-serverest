@@ -1,52 +1,99 @@
-#  Relatório de Bugs
+# 🐞 Relatório de Bug – API
 
-**Software:**  
-**QA responsável:**  
-**Data:** 
+| Campo | Descrição |
+|------|-----------|
+| **Sistema / API** |  |
+| **Endpoint** |  |
+| **QA responsável** |  |
+| **Data** |  |
+
 
 
 ## Bug 01: 
 
-### Informações do Bug
+| Campo | Descrição |
+|------|--------|
+| **ID** | BUG-API-001 |
+| **Título** |  |
+| **Descrição** |  |
+| **Severidade** | Alta / Média / Baixa |
+| **Prioridade** | Alta / Média / Baixa |
+| **Status** | Aberto |
+
+---
+
+### Passos para Reproduzir
+
+| # | **Ação** |
+|---|------|
+| 1 | Garantir que a API esteja disponível |
+| 2 | Enviar requisição para o endpoint |
+| 3 | Informar payload conforme descrito |
+| 4 | Enviar a requisição |
+
+---
+
+### Requisição
 
 | Campo | Detalhe |
 |------|--------|
-| **ID** | BUG-001 |
-| **Descrição** | Quando o usuário não adiciona produtos no carrinho e clica em checkout, ele avança de página quando deveria permanecer na mesma |
-| **Severidade** | Alta |
-| **Prioridade** | Alta |
-| **Status** | Aberto |
+| **Método HTTP** |  |
+| **Endpoint** |  |
+| **Headers** | `Content-Type: application/json` |
+| **Body (request)** | ```json\n{\n\n}\n``` |
 
-### Passo a passo para simular
+---
 
-| Passo |
-|------|
-| 1. Estar logado no sistema com um usuário válido |
-| 2. Acessar a página catálogo de compras |
-| 3. Acessar a página carrinho de compras clicando no ícone do carrinho |
-| 4. Clicar no botão **Checkout** |
+### Resposta
+
+| Campo | Detalhe |
+|------|--------|
+| **Status HTTP obtido** |  |
+| **Body (response)** | ```json\n{\n\n}\n``` |
+
+---
 
 ### Resultado
 
-| Comportamento Esperado | Comportamento Obtido |
-|------------------------|---------------------|
-| Exibir mensagem de erro e permanecer na página| Usuário é redirecionado para a tela de checkout |
+| Esperado | Obtido |
+|----------|--------|
+|  |  |
 
+---
 
+### Ambiente
 
-| Ambiente |
-|---------|
-| Ambiente de homologação |
-| Desktop – Windows 11 |
-| Google Chrome V143.0.7 |
-| SauceDemo |
+| Campo | Detalhe |
+|------|--------|
+| **Ambiente** | Homologação / Produção |
+| **Ferramenta** | Postman |
+| **Sistema Operacional** | Windows / Linux / macOS |
+| **Versão da API** | v1 |
 
+---
 
+### Rastreabilidade
 
-| Caso de Teste relacionado |
-|---------------|
-|   |
+| Item | Referência |
+|------|------------|
+| **Caso de Teste** |  |
+| **Condição de Teste** |  |
+| **Requisito** |  |
 
-| Funcionalidade relacionado |
-|---------------|
-|   |
+---
+
+### Evidências
+
+| Tipo | Link / Descrição |
+|------|------------------|
+| Requisição |  |
+| Resposta |  |
+| Logs |  |
+
+---
+
+### Observações Adicionais
+
+| Observação |
+|------------|
+|  |
