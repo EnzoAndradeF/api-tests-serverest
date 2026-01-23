@@ -1,11 +1,11 @@
-# 🐞 Relatório de Bug – API
+# Relatório de Bug – API
 
 | Campo | Descrição |
 |------|-----------|
-| **Sistema / API** |  |
-| **Endpoint** |  |
-| **QA responsável** |  |
-| **Data** |  |
+| **Sistema / API** | ServeRest  |
+| **Endpoint** | /usuarios |
+| **QA responsável** | Enzo Andrade |
+| **Data** | 23/01/2026 |
 
 
 
@@ -14,10 +14,10 @@
 | Campo | Descrição |
 |------|--------|
 | **ID** | BUG-API-001 |
-| **Título** |  |
-| **Descrição** |  |
-| **Severidade** | Alta / Média / Baixa |
-| **Prioridade** | Alta / Média / Baixa |
+| **Título** | Cadastro com senha pequena |
+| **Descrição** | Quando o usuário cadastra uma senha com a quantidade de caractere inferior a 5, então o cadastro é realizado com sucesso, quando deveria impedir o cadastro e aparecer uma mensagem informando que a senha é pequena |
+| **Severidade** | Baixa |
+| **Prioridade** | Alta  |
 | **Status** | Aberto |
 
 ---
@@ -37,10 +37,11 @@
 
 | Campo | Detalhe |
 |------|--------|
-| **Método HTTP** |  |
-| **Endpoint** |  |
+| **Método HTTP** | POST |
+| **Endpoint** | /usuarios |
 | **Headers** | `Content-Type: application/json` |
-| **Body (request)** | ```json\n{\n\n}\n``` |
+| **Body (request)** | { "nome": "enzo","email": "teste01.07@qa.com","password": "test","administrador": "true" }
+ |
 
 ---
 
@@ -48,8 +49,8 @@
 
 | Campo | Detalhe |
 |------|--------|
-| **Status HTTP obtido** |  |
-| **Body (response)** | ```json\n{\n\n}\n``` |
+| **Status HTTP obtido** | 201 |
+| **Body (response)** | { "message": "Cadastro realizado com sucesso", "_id": "yoDSgLb6qfKOcwTy"} |
 
 ---
 
@@ -57,7 +58,7 @@
 
 | Esperado | Obtido |
 |----------|--------|
-|  |  |
+| Status code 400 e mensaagem de erro |  Status code 201 e cadastro realizado com sucesso |
 
 ---
 
@@ -65,10 +66,10 @@
 
 | Campo | Detalhe |
 |------|--------|
-| **Ambiente** | Homologação / Produção |
+| **Ambiente** | Homologação  |
 | **Ferramenta** | Postman |
-| **Sistema Operacional** | Windows / Linux / macOS |
-| **Versão da API** | v1 |
+| **Sistema Operacional** | Windows |
+| **Versão da API** | 2.29.7|
 
 ---
 
@@ -76,24 +77,8 @@
 
 | Item | Referência |
 |------|------------|
-| **Caso de Teste** |  |
-| **Condição de Teste** |  |
-| **Requisito** |  |
+| **Caso de Teste** | CT01.07 |
+| **Condição de Teste** | Cadastro de usuário |
+| **Requisito** | A senha deve conter no mínimo 5 caracteres |
 
----
 
-### Evidências
-
-| Tipo | Link / Descrição |
-|------|------------------|
-| Requisição |  |
-| Resposta |  |
-| Logs |  |
-
----
-
-### Observações Adicionais
-
-| Observação |
-|------------|
-|  |

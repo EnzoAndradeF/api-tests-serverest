@@ -38,15 +38,15 @@ O plano de testes utilizada nesse projeto pode ser encontrada em: **[Plano de te
 O relatório de bugs feito nesse projeto está presente em **[Relatório de bugs](./docs/relatorio-de-bugs.md)**
 
 ## Ferramentas utilizadas
-* **Postman**: Execução de testes.
+* **Xmind**: Planejamento estratégico e mapa mental
 * **Markdown**: Escrita e estruturação da documentação técnica.
+* **Postman**: Execução de testes.
 
-## Como Executar os Testes
-1. Importar a collection do Postman
-2. Executar as requisições
-3. Verificar scripts de validações
-4. Consultar evidências na pasta da história
+## **Contato**
 
+**Enzo Andrade | [LinkedIn](https://www.linkedin.com/in/enzo-andrade-4aa1b9200/) | enzoandradef.08@gmail.com**
+
+[![Enzo Andrade](https://avatars.githubusercontent.com/u/112990187?v=4&s=100)](https://github.com/EnzoAndradeF)
 
 
 

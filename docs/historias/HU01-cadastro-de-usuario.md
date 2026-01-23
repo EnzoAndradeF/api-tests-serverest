@@ -202,7 +202,7 @@ Para que eu possa acessar e utilizar a aplicação**
 | Massa de dados |
 |:---------------|
 |"nome": "enzo",
-  "email": "beltrano@qa.com.b",
+  "email": "fulano@qa.com",
  "password": "teste",
   "administrador": "true" |
 
@@ -235,7 +235,7 @@ Para que eu possa acessar e utilizar a aplicação**
 | Massa de dados |
 |:---------------|
 |"nome": "enzo",
-  "email": "teste01.07@qa.com.b",
+  "email": "teste01.07@qa.com",
  "password": "test",
   "administrador": "true" |
 
@@ -268,7 +268,7 @@ Para que eu possa acessar e utilizar a aplicação**
 | Massa de dados |
 |:---------------|
 |"nome": "enzo",
-  "email": "teste01.08@qa.com.b",
+  "email": "teste01.08@qa.com",
  "password": "teste",
   "administrador": "true" |
 
@@ -301,7 +301,7 @@ Para que eu possa acessar e utilizar a aplicação**
 | Massa de dados |
 |:---------------|
 |"nome": "enzo",
-  "email": "teste01.09@qa.com.b",
+  "email": "teste01.09@qa.com",
  "password": "testes",
   "administrador": "true" |
 
@@ -317,3 +317,6 @@ Para que eu possa acessar e utilizar a aplicação**
 | **Resultado Esperado** |
 |:-------|
 |O sistema deve retornar o status code 201, e mensagem de sucesso|
+
+## Evidências
+Você pode encontrar a execução dos testes na pasta **[Cadastro de usuários](/evidencias/01%20-%20cadastro%20de%20usuario/)**.

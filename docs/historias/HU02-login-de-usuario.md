@@ -25,7 +25,7 @@ Para acessar funcionalidades restritas**
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT02-CT01 | Realizar o login com credenciais válidas. |
+| CT02.01 | Realizar o login com credenciais válidas. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
@@ -36,10 +36,9 @@ Para acessar funcionalidades restritas**
 
 | Massa de dados |
 |:---------------|
-|"nome": "enzo comum",
-  "email": "enzocomum@qa.com.br",
- "password": "teste",
-  "administrador": "false" |
+|"email": "fulano@qa.com",
+  "password": "teste"
+ |
 
 | **Ação** |
 |:-------|
@@ -67,10 +66,10 @@ Para acessar funcionalidades restritas**
 
 | Massa de dados |
 |:---------------|
-|"nome": "teste",
+|
   "email": "emailinexistente@qa.com.br",
  "password": "teste",
-  "administrador": "false" |
+   |
 
 | **Ação** |
 |:-------|
@@ -87,7 +86,7 @@ Para acessar funcionalidades restritas**
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT02-CT03 | Realizar o login com campos vazios. |
+| CT02.03 | Realizar o login com campos vazios. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
@@ -98,10 +97,9 @@ Para acessar funcionalidades restritas**
 
 | Massa de dados |
 |:---------------|
-|"nome": "",
-  "email": "",
+|"email": "",
  "password": "",
-  "administrador": "" |
+|
 
 | **Ação** |
 |:-------|
@@ -111,4 +109,7 @@ Para acessar funcionalidades restritas**
 
 | **Resultado Esperado** |
 |:-------|
-|O sistema deve retornar o status code 401 e mensagem de erro|
+|O sistema deve retornar o status code 400 e mensagem de erro|
+
+## Evidências
+Você pode encontrar a execução dos testes na pasta **[Login](/evidencias/02%20-%20login/)**.

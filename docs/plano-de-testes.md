@@ -23,7 +23,6 @@ Garantir que os principais endpoints da API funcionem conforme esperado, validan
 - Testes de requisições HTTP (GET, POST, PUT, DELETE)
 - Validação de códigos de status
 - Validação de payload de resposta
-- Testes de contrato utilizando JSON Schema
 - Testes negativos (dados inválidos ou incompletos)
 
 ### 3.2 Fora do Escopo
@@ -49,8 +48,6 @@ Cada história de usuário contém:
 - Testes funcionais
 - Testes positivos
 - Testes negativos
-- Testes exploratórios
-- Testes de contrato (JSON Schema)
 
 ---
 
@@ -58,7 +55,6 @@ Cada história de usuário contém:
 - Partição de Equivalência
 - Análise de Valores Limite
 - Testes baseados em regras de negócio
-- Heurísticas de VADER
 
 ---
 

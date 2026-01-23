@@ -28,7 +28,7 @@ Para que ele possa ser vendido no sistema**
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT03-CT01 | Realizar o cadastro de produto com usuário administrador. |
+| CT03.01 | Realizar o cadastro de produto com usuário administrador. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
@@ -55,17 +55,51 @@ Para que ele possa ser vendido no sistema**
 
 | **Resultado Esperado** |
 |:-------|
-|O sistema deve retornar o status code 201, mensagem de sucesso e Id do usuário|
+|O sistema deve retornar o status code 201, mensagem de sucesso e Id do produto|
+
 
 ### Caso de teste 02: 
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT03-CT02 | Realizar o cadastro de produto com usuário comum. |
+| CT03-CT02 | Realizar o cadastro de produto com nome existente. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
-| **Pré-condições** | API Serverest disponível / usuário comum autenticado |
+| **Pré-condições** | API Serverest disponível / usuário administrador autenticado |
+| **Método HTTP** | POST |
+| **Endpoint** | /produtos |
+| **Headers** | Content-Type: application/json |
+
+| Massa de dados |
+|:---------------|
+|  "nome": "notebook lenovo ideapad3",
+  "preco": 700,
+  "descricao": "Notebook"
+   "quantidade": 100 |
+
+| **Ação** |
+|:-------|
+ Definir o método HTTP POST
+ Definir o endpoint produtos
+ Preencher a propriedade “nome”
+ Preencher a propriedade “preco”
+ Preencher a propriedade “descricao”
+ Preencher a propriedade “quantidade” |
+
+| **Resultado Esperado** |
+|:-------|
+|O sistema deve retornar o status code 400, mensagem de erro|
+
+### Caso de teste 03: 
+---
+| ID       | Descrição |
+| :------- | :---------|
+| CT03.03 | Realizar o cadastro de produto com preço negativo. |
+
+| Campo       | Detalhe |
+| :------- | :---------|
+| **Pré-condições** | API Serverest disponível / usuário administrador autenticado |
 | **Método HTTP** | POST |
 | **Endpoint** | /produtos |
 | **Headers** | Content-Type: application/json |
@@ -73,40 +107,7 @@ Para que ele possa ser vendido no sistema**
 | Massa de dados |
 |:---------------|
 |  "nome": "notebook lenovo ideapad4",
-  "preco": 700,
-  "descricao": "Notebook"
-   "quantidade": 100 |
-
-| **Ação** |
-|:-------|
- Definir o método HTTP POST
- Definir o endpoint produtos
- Preencher a propriedade “nome”
- Preencher a propriedade “preco”
- Preencher a propriedade “descricao”
- Preencher a propriedade “quantidade” |
-
-| **Resultado Esperado** |
-|:-------|
-|O sistema deve retornar o status code 403, mensagem de erro|
-
-### Caso de teste 03: 
----
-| ID       | Descrição |
-| :------- | :---------|
-| CT03-CT03 | Realizar o cadastro de produto com nome existente. |
-
-| Campo       | Detalhe |
-| :------- | :---------|
-| **Pré-condições** | API Serverest disponível / usuário administrador autenticado |
-| **Método HTTP** | POST |
-| **Endpoint** | /produtos |
-| **Headers** | Content-Type: application/json |
-
-| Massa de dados |
-|:---------------|
-|  "nome": "notebook lenovo ideapad3",
-  "preco": 700,
+  "preco": -10,
   "descricao": "Notebook"
    "quantidade": 100 |
 
@@ -127,40 +128,7 @@ Para que ele possa ser vendido no sistema**
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT03-CT04 | Realizar o cadastro de produto com preço negativo. |
-
-| Campo       | Detalhe |
-| :------- | :---------|
-| **Pré-condições** | API Serverest disponível / usuário administrador autenticado |
-| **Método HTTP** | POST |
-| **Endpoint** | /produtos |
-| **Headers** | Content-Type: application/json |
-
-| Massa de dados |
-|:---------------|
-|  "nome": "notebook lenovo ideapad5",
-  "preco": -10,
-  "descricao": "Notebook"
-   "quantidade": 100 |
-
-| **Ação** |
-|:-------|
- Definir o método HTTP POST
- Definir o endpoint produtos
- Preencher a propriedade “nome”
- Preencher a propriedade “preco”
- Preencher a propriedade “descricao”
- Preencher a propriedade “quantidade” |
-
-| **Resultado Esperado** |
-|:-------|
-|O sistema deve retornar o status code 400, mensagem de erro|
-
-### Caso de teste 05: 
----
-| ID       | Descrição |
-| :------- | :---------|
-| CT03-CT05 | Realizar o cadastro de produto com quantidade negativa. |
+| CT03.04 | Realizar o cadastro de produto com quantidade negativa. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
@@ -188,3 +156,6 @@ Para que ele possa ser vendido no sistema**
 | **Resultado Esperado** |
 |:-------|
 |O sistema deve retornar o status code 400, mensagem de erro|
+
+## Evidências
+Você pode encontrar a execução dos testes na pasta **[Cadastro de produtos](/evidencias/03%20-%20Cadastro%20de%20produto/)**.

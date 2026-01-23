@@ -26,7 +26,7 @@ Para realizar uma compra de produtos**
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT04-CT01 | Realizar o criação de carrinho de compras. |
+| CT04.01 | Realizar o criação de carrinho de compras. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
@@ -55,7 +55,7 @@ Para realizar uma compra de produtos**
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT04-CT02 | Adicionar quantidade de produto maior que estoque no carrinho. |
+| CT04.02 | Adicionar quantidade de produto maior que estoque no carrinho. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
@@ -66,8 +66,8 @@ Para realizar uma compra de produtos**
 
 | Massa de dados |
 |:---------------|  
-|"iProduto":""
-"quantidade":|
+|"idProduto": "PYmReWtX1ijiRY9u",
+   "quantidade": 101|
 
 | **Ação** |
 |:-------|
@@ -84,7 +84,7 @@ Para realizar uma compra de produtos**
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT04-CT03 | Adicionar produto inexistente no carrinho. |
+| CT04.03 | Adicionar produto inexistente no carrinho. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
@@ -95,8 +95,8 @@ Para realizar uma compra de produtos**
 
 | Massa de dados |
 |:---------------|  
-|"iProduto": "abcdef",
-"quantidade": 10|
+|"iProduto": "inexistente",
+"quantidade": 1|
 
 | **Ação** |
 |:-------|
@@ -113,7 +113,7 @@ Para realizar uma compra de produtos**
 ---
 | ID       | Descrição |
 | :------- | :---------|
-| CT04-CT04 | Criar carrinho de compras com campos vazios. |
+| CT04.04 | Criar carrinho de compras com campos vazios. |
 
 | Campo       | Detalhe |
 | :------- | :---------|
@@ -137,3 +137,6 @@ Para realizar uma compra de produtos**
 | **Resultado Esperado** |
 |:-------|
 |O sistema deve retornar o status code 400, mensagem de erro|
+
+## Evidências
+Você pode encontrar a execução dos testes na pasta **[Criação de carrinho](/evidencias/04%20-%20Criação%20de%20carrinho/)**.
